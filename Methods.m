@@ -5,6 +5,8 @@ function [MethodRoberts,MethodLog,MethodSobel] = Methods(pathname,filename)
 im = imread([pathname,filename]);
 img = im(:, :, 1);
 
+tic
+disp('Running MethodRoberts');
 MethodRoberts = edge(img,'roberts');
     %    size(MethodRoberts)
     %    h1 = [4,0;0,-4];
@@ -12,7 +14,10 @@ MethodRoberts = edge(img,'roberts');
 
     % figure
     % imshow(MethodRoberts);
+toc
 
+tic
+disp('Running MethodLog');
 MethodLog = edge(img,'log');
     %    size(MethodLog)
     %    h2 = [0,1,0;1,-4,1;0,1,0];
@@ -20,7 +25,10 @@ MethodLog = edge(img,'log');
 
     % figure
     % imshow(MethodLog);
+toc
 
+tic
+disp('Running MethodSobel');
 MethodSobel = edge(img);
     %    size(MethodSobel)
     %    h3 = [1,2,1;0,0,0;-1,-2,-1];
@@ -28,4 +36,5 @@ MethodSobel = edge(img);
 
     % figure
     % imshow(MethodSobel);
+toc
 end

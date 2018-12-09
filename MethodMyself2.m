@@ -1,6 +1,7 @@
 function MyMethod2 = MethodMyself2 (pathname,filename)
 
-
+tic
+disp('Running MethodMyself2');
 % im = imread ('.\flower.JPG');
 im = imread([pathname,filename]);
 
@@ -71,4 +72,5 @@ MyMethod2(:,:,3) = 0;
 
 % figure
 % imshow (MyMethod2);
+toc
 end
