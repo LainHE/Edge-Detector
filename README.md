@@ -1,5 +1,6 @@
 Edge-Detector
 ========================================
+click [here](https://github.com/LainHE/Edge-Detector) go to my original project.<br>
 This project mainly aims to detect the edge of `flower.JPG`. But you could also try other images.<br>
 Because the `MethodMyself2` has many loop, it might take a while to show the result.<br><br>
 
